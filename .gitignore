@@ -1,0 +1,5 @@
+*.log
+ffmpeg*
+geckodriver*
+env/
+__pycache__/
