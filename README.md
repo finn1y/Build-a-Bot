@@ -1,6 +1,6 @@
 # FuzzBot
 
-A discord bot with a theme
+A discord bot which can be built on any machine with different features included or not depending on use case
 
 ## Install
 
@@ -11,18 +11,23 @@ A discord bot with a theme
 git clone https://github.com/finn1y/FuzzBot.git
 ```
 2. Build the environment using [make](http://gnuwin32.sourceforge.net/install.html) (or run bin/build script directly)
-
-    Linux
+    Make will automatically detect the OS it is being run on:
     ```
-    make linux
+    make
     ```
-    Windows
+    
+    To build for a specific OS:
+    ##### Linux
     ```
-    make windows
+    make Linux
     ```
-    MacOS
+    ##### Windows
     ```
-    make mac
+    make Windows
+    ```
+    ##### MacOS
+    ```
+    make Darwin
     ```
 3. Run the bot
 
