@@ -11,12 +11,13 @@ A discord bot which can be built on any machine with different features included
 git clone https://github.com/finn1y/FuzzBot.git
 ```
 2. Build the environment using [make](http://gnuwin32.sourceforge.net/install.html) (or run bin/build script directly)
+    
     Make will automatically detect the OS it is being run on:
     ```
     make
     ```
     
-    To build for a specific OS:
+    Or to build for a specific OS:
     ##### Linux
     ```
     make Linux
@@ -31,11 +32,11 @@ git clone https://github.com/finn1y/FuzzBot.git
     ```
 3. Run the bot
 
-    Linux/MacOS
+    ##### Linux/MacOS
     ```
     ./bin/run.sh
     ```
-    Windows
+    ##### Windows
     ```
     .\bin\run.bat
     ```
