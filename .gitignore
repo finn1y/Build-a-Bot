@@ -2,4 +2,5 @@
 ffmpeg*
 geckodriver*
 env/
+main/
 __pycache__/

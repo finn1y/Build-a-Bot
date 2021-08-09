@@ -201,12 +201,16 @@ async def stop(ctx):
 async def kill(ctx):
     await ctx.send("It's treason then...")
 
+<?php if ($music == 1) { ?>
     for root, dirs, files in os.walk("./Music/"):
         for file in files:
             if file != "ffmpeg.exe" and file != "ffmpeg":
                 os.remove(os.path.join(root, file))
+<?php } ?>
 
-    Browser.quit()            
+<?php if ($browser == 1) { ?>
+    Browser.quit()           
+<?php } ?> 
     exit(0)
 
 bot.run(TOKEN)    

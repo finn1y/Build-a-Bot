@@ -53,7 +53,7 @@ if [ "$(expr substr $SYSTEM 1 5)" == "Linux" -o "$(expr substr $SYSTEM 1 6)" == 
         chmod +x ./geckodriver/geckodriver
     fi
 
-    cp -uf ./src/FireFoxBrowser.py ./main
+    cp -f ./src/FireFoxBrowser.py ./main
 <?php } ?>
 
 <?php if ($music == 1) { ?>
@@ -74,7 +74,7 @@ if [ "$(expr substr $SYSTEM 1 5)" == "Linux" -o "$(expr substr $SYSTEM 1 6)" == 
         chmod +x ./Music/ffmpeg
     fi
 
-    cp -uf ./src/yt.py ./main
+    cp -f ./src/yt.py ./main
 <?php } ?>
 
     if [ "$(type -P python3)" == "" ]; then
@@ -103,6 +103,9 @@ if [ "$(expr substr $SYSTEM 1 5)" == "Linux" -o "$(expr substr $SYSTEM 1 6)" == 
         echo "Setting up environment"
         python3 -m venv env
     fi
+
+    ./env/bin/activate && python3 ./main/Bot.py
+
 elif [ "$(expr substr $SYSTEM 1 10)" == "MINGW64_NT" -o "$(expr substr $SYSTEM 1 10)" == "MINGW32_NT" ]; then
 <?php if ($browser == 1) { ?>
     if [ ! -e ./geckodriver/geckodriver.exe ]; then
@@ -113,7 +116,7 @@ elif [ "$(expr substr $SYSTEM 1 10)" == "MINGW64_NT" -o "$(expr substr $SYSTEM 1
         rm -rf ./geckodrver/geckodriver-v0.29.1.zip
     fi
 
-    cp -uf ./src/FireFoxBrowser.py ./main
+    cp -f ./src/FireFoxBrowser.py ./main
 <?php } ?>
 
 <?php if ($music == 1) { ?>
@@ -126,7 +129,7 @@ elif [ "$(expr substr $SYSTEM 1 10)" == "MINGW64_NT" -o "$(expr substr $SYSTEM 1
         rm -rf ./Music/ffmpeg-4.4-essentials_build ./Music/ffmpeg-2021-07-06-git-758e2da289-essentials_build.zip
     fi
 
-    cp -uf ./src/yt.py ./main
+    cp -f ./src/yt.py ./main
 <?php } ?>
 
     if [ "$(type -P python3)" == "" ]; then
@@ -144,6 +147,6 @@ elif [ "$(expr substr $SYSTEM 1 10)" == "MINGW64_NT" -o "$(expr substr $SYSTEM 1
         echo "Setting up environment"
         python -m venv env
     fi
+
+    ./env/Scripts/activate && python ./main/Bot.py
 fi
-
-
