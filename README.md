@@ -1,6 +1,20 @@
-# FuzzBot
+# Build a Bot
 
-A discord bot which can be built on any machine with different features included or not depending on use case
+A discord bot which can be built with different features included or not depending on use case
+
+## Options
+
+#### Browser
+```
+-b/--browser
+```
+Provides the bot with web searching capabilities, including: google, wikipedia and youtube
+
+#### Music
+```
+-m/--music
+```
+Provides the bot with sound playing features for youtube videos
 
 ## Install
 
@@ -8,27 +22,21 @@ A discord bot which can be built on any machine with different features included
 1. clone the repo into a place of your choice
 
 ```
-git clone https://github.com/finn1y/FuzzBot.git
+git clone https://github.com/finn1y/Build-a-Bot.git
 ```
-2. Build the environment using [make](http://gnuwin32.sourceforge.net/install.html) (or run bin/build script directly)
+2. Run the build binary for your system (note the binaries require compiling from main.cpp and currently only Linux is supported):
     
-    Make will automatically detect the OS it is being run on:
-    ```
-    make
-    ```
-    
-    Or to build for a specific OS:
     ##### Linux
     ```
-    make Linux
+    ./build-linux64 [options]
     ```
-    ##### Windows
+    ##### Windows (not supported by main.cpp)
     ```
-    make Windows
+    .\build-win64 [options]
     ```
-    ##### MacOS
+    ##### MacOS (not supported by main.cpp)
     ```
-    make Darwin
+    ./build-macOS [options]
     ```
 3. Run the bot
 
@@ -40,10 +48,4 @@ git clone https://github.com/finn1y/FuzzBot.git
     ```
     .\bin\run.bat
     ```
-4. Enjoy FuzzBot's abilities!
-
-### Using file explorer
-1. Find the bin directory in file explorer
-2. Run (double click) the build script (build.sh for Linux/MacOS or build.bat for Windows)
-3. Run the run script (run.sh for Linux/MacOS or run.bat for Windows) 
-4. Enjoy FuzzBot's abilities!
+4. Enjoy Your new bot's abilities!
