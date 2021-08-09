@@ -28,16 +28,17 @@ git clone https://github.com/finn1y/Build-a-Bot.git
     
     ##### Linux
     ```
-    ./build-linux64 [options]
+    ./build-linux64 [options] (-t/--token discord_token)/(--token=discord_token)
     ```
     ##### Windows (not supported by main.cpp)
     ```
-    .\build-win64 [options]
+    .\build-win64 [options] (-t/--token discord_token)/(--token=discord_token)
     ```
     ##### MacOS (not supported by main.cpp)
     ```
-    ./build-macOS [options]
+    ./build-macOS [options] (-t/--token discord_token)/(--token=discord_token)
     ```
+    discord_token is the 'TOKEN' found in the Bot section of an application on the (discord dev)[https://discord.com/developers/] page
 3. Run the bot
 
     ##### Linux/MacOS
