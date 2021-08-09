@@ -38,7 +38,7 @@ git clone https://github.com/finn1y/Build-a-Bot.git
     ```
     ./build-macOS [options] (-t/--token discord_token)/(--token=discord_token)
     ```
-    discord_token is the 'TOKEN' found in the Bot section of an application on the (discord dev)[https://discord.com/developers/] page
+    discord_token is the 'TOKEN' found in the Bot section of an application on the [discord dev](https://discord.com/developers/) page
 3. Run the bot
 
     ##### Linux/MacOS
