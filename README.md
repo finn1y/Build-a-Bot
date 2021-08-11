@@ -2,19 +2,17 @@
 
 A discord bot which can be built with different features included or not depending on use case
 
-## Options
+## Help
 
-#### Browser
-```
--b/--browser
-```
-Provides the bot with web searching capabilities, including: google, wikipedia and youtube
+Usage: build-a-bot [-h/--help] [-c/--clean] [FEATURES] [(-t/--token TOKEN)/(--token=TOKEN)]
+Options:
+  -c, --clean           clean (delete) the bot files
+  -h, --help            shows this message
+  -t, --token=TOKEN     adds bot's TOKEN to the .env file, if not added here must be done manually
 
-#### Music
-```
--m/--music
-```
-Provides the bot with sound playing features for youtube videos
+Features:
+  -b, --browser         includes browser functionality in the bot
+  -m, --music           includes functionality to play youtube videos in the bot
 
 ## Install
 
@@ -24,29 +22,33 @@ Provides the bot with sound playing features for youtube videos
 ```
 git clone https://github.com/finn1y/Build-a-Bot.git
 ```
-2. Run the build binary for your system (note the binaries require compiling from main.cpp and currently only Linux is supported):
+2. Run the build binary (found in bin directory) for your system (note only Linux is currently available as a binary, windows can be compiled):
     
     ##### Linux
     ```
-    ./build-linux64 [options] (-t/--token discord_token)/(--token=discord_token)
+    ./build-a-bot [-h/--help] [-c/--clean] [FEATURES] [(-t/--token TOKEN)/(--token=TOKEN)]
     ```
-    ##### Windows (not supported by main.cpp)
+    ##### Windows (must be compiled from main-win.cpp)
     ```
-    .\build-win64 [options] (-t/--token discord_token)/(--token=discord_token)
+    .\build-a-bot [-h/--help] [-c/--clean] [FEATURES] [(-t/--token TOKEN)/(--token=TOKEN)]
     ```
-    ##### MacOS (not supported by main.cpp)
+    ##### MacOS (not yet supported)
     ```
-    ./build-macOS [options] (-t/--token discord_token)/(--token=discord_token)
+    ./build-a-bot [-h/--help] [-c/--clean] [FEATURES] [(-t/--token TOKEN)/(--token=TOKEN)]
     ```
-    discord_token is the 'TOKEN' found in the Bot section of an application on the [discord dev](https://discord.com/developers/) page
+    TOKEN is the "TOKEN" found in the Bot section of an application on the [discord dev](https://discord.com/developers/) page
 3. Run the bot
 
     ##### Linux/MacOS
     ```
-    ./bin/run.sh
+    ./main/run.sh
     ```
     ##### Windows
     ```
-    .\bin\run.bat
+    .\main\run.bat
     ```
 4. Enjoy Your new bot's abilities!
+
+## Creating a discord bot
+
+A useful guide on how to create a discord bot from scratch can be found [here](https://www.howtogeek.com/364225/how-to-make-your-own-discord-bot/). All that you need to do is follow the "Getting Started" step and use the token as the "TOKEN" mentioned in the install guide above.   
