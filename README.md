@@ -3,7 +3,7 @@
 A discord bot which can be built with different features included or not depending on use case
 
 ## Help
-
+```
 Usage: build-a-bot [-h/--help] [-c/--clean] [FEATURES] [(-t/--token TOKEN)/(--token=TOKEN)]
 Options:
   -c, --clean           clean (delete) the bot files
@@ -13,7 +13,7 @@ Options:
 Features:
   -b, --browser         includes browser functionality in the bot
   -m, --music           includes functionality to play youtube videos in the bot
-
+```
 ## Install
 
 ### Using the terminal/command line
