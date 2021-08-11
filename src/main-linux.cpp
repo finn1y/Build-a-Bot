@@ -37,23 +37,29 @@ int main(int argc, char** argv) {
         }
     }
 
-    printf("%s\n", token.c_str());
     make();
     return 0;
 }
 
 void help() {
-    printf("Usage: build [-h/--help] [-c/--clean] [-b/--browser] [-m/--music] [(-t/--token token)/(--token=token)]\n");    
+    printf("Usage: build-a-bot [-h/--help] [-c/--clean] [FEATURES] [(-t/--token TOKEN)/(--token=TOKEN)]\n");    
+    printf("Options:\n");
+    printf("  -c, --clean\t\tclean (delete) the bot files\n");
+    printf("  -h, --help\t\tshows this message\n");
+    printf("  -t, --token=TOKEN\tadds bot's TOKEN to the .env file, if not added here must be done manually\n");
+    printf("\nFeatures:\n");
+    printf("  -b, --browser\t\tincludes browser functionality in the bot\n");
+    printf("  -m, --music\t\tincludes functionality to play youtube videos in the bot\n");
 }
 
 void clean() {
-    system("rm -rf bin/ main/ env/ geckodriver/ Music/");
+    system("rm -rf main/ env/ geckodriver/ Music/");
 }
 
 void make() {
     std::string flags;
 
-    system("mkdir -p bin main");
+    system("mkdir -p main");
 
     if (flag_mask & 0b01) {
             flags += " --browser";
@@ -68,7 +74,7 @@ void make() {
     sprintf(buffer, "echo DISCORD_TOKEN=%s > main/.env", token.c_str());
     system(buffer);
 
-    sprintf(buffer, "php ./src/run.sh.php%s > bin/run.sh", flags.c_str());
+    sprintf(buffer, "php ./src/run.sh.php%s > main/run.sh", flags.c_str());
     system(buffer);
 
     sprintf(buffer, "php ./src/Bot.py.php%s > main/Bot.py", flags.c_str());

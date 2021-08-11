@@ -14,6 +14,12 @@ foreach($argv as $arg) {
 } ?>
 #!/usr/bin/env bash
 
+CURRENT_DIR=`basename $PWD`
+
+if [ "$CURRENT_DIR" == "main" -o "$CURRENT_DIR" == "bin" -o "$CURRENT_DIR" == "src" ]; then
+    cd ..
+fi
+
 SYSTEM=`uname -s`
 
 if [ "$(expr substr $SYSTEM 1 5)" == "Linux" -o "$(expr substr $SYSTEM 1 6)" == "Darwin" ]; then
