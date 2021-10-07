@@ -1,6 +1,12 @@
 # Build a Bot
 
+## About
+
 A discord bot which can be built with different features included or not depending on use case
+
+Project by: Finn
+
+The repository is split into a source directory where all the source code is kept and a binary directory where pre-built binary is for building the bot from the php and other code. The C++ source should be compiled to produce the binary which is used to "build" the bot code base. 
 
 ## Help
 ```
